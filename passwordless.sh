@@ -24,6 +24,8 @@ read_passwords(){
     for i in $password; do 
     server_password+=($i)
     done
+
+    # echo ${server_password[@]}
 }
 
 # generating the key
@@ -36,7 +38,8 @@ key_generation(){
 # making the copy of a key in the remote server 
 copying_key_to_remote_server(){
     for ((k=0;k<$count;k++)); do 
-      sshpass -p ${server_password[$i]} ssh-copy-id ${server_address[$k]}
+   
+      sshpass -p ${server_password[$k]} ssh-copy-id ${server_address[$k]}
     done 
 }
 
