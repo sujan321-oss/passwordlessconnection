@@ -5,7 +5,7 @@ server_address=()
 server_password=()
 count=0
 
-# reading the server_inf oand creating server_address out of it
+# reading the server_info oand creating server_address out of it
 read_server_info(){
     local  server_path=$1
     server_data=$(awk '{ print $1 }' "$server_path")
@@ -31,7 +31,7 @@ read_passwords(){
 
 
 key_generation(){
-    echo "P00kharelk#" |  sudo -S ssh-keygen -t rsa -N ""
+    echo "paassworrd" |  sudo -S ssh-keygen -t rsa -N ""
     echo "key generated"
 }
 
